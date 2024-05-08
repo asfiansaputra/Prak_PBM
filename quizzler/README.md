@@ -1,16 +1,7 @@
 # quizzler
 
-A new Flutter project.
+![image](https://github.com/asfiansaputra/Prak_PBM/assets/162483878/d1d471d9-64a1-4fc9-92ce-9ae4103143d1)
+Merubah icon 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/asfiansaputra/Prak_PBM/assets/162483878/31d83dc3-1c49-4049-a698-e07c5eb20475)
+Perhitungan jumlah benar dan salah sudah akurat
