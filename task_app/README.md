@@ -1,16 +1,10 @@
-# task_app
+# TASK APP PROJECT
 
-A new Flutter project.
+![Screenshot_1716813971](https://github.com/asfiansaputra/Prak_PBM/assets/162483878/b148ae8e-45f0-4f0d-9e35-cc64d36e08e7)
+TAMPILAN AWAL SETELAH MEMASUKI APP
 
-## Getting Started
+![Screenshot_1716813980](https://github.com/asfiansaputra/Prak_PBM/assets/162483878/56713eec-4a15-42f8-b2a9-0c12ae0a9762)
+TAMPILAN UNTUK MENAMBAH NOTE BARU
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1716814040](https://github.com/asfiansaputra/Prak_PBM/assets/162483878/022d9b4f-eb3d-4e2c-bb19-23c462a34338)
+TAMPILAN SESUDAH MENAMBAHKAN NOTE BARU
