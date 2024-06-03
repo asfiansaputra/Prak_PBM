@@ -1,0 +1,1 @@
+ D:\\File\ Kuliah\ Farsya\\SMT\ 8\\PBM\\Praktikum\\my_app_learning\\.dart_tool\\flutter_build\\5826c63b8d2e63990ceac771b3f33202\\native_assets.yaml: 

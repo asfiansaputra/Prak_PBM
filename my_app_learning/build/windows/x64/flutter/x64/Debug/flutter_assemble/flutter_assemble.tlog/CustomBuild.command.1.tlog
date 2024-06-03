@@ -1,0 +1,28 @@
+^D:\FILE KULIAH FARSYA\SMT 8\PBM\PRAKTIKUM\MY_APP_LEARNING\BUILD\WINDOWS\X64\CMAKEFILES\413B1C86167AA4F2E7A62AC8EB3751C8\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=D:\tools\flutter "PROJECT_DIR=D:\File Kuliah Farsya\SMT 8\PBM\Praktikum\my_app_learning" FLUTTER_ROOT=D:\tools\flutter "FLUTTER_EPHEMERAL_DIR=D:\File Kuliah Farsya\SMT 8\PBM\Praktikum\my_app_learning\windows\flutter\ephemeral" "PROJECT_DIR=D:\File Kuliah Farsya\SMT 8\PBM\Praktikum\my_app_learning" "FLUTTER_TARGET=D:\File Kuliah Farsya\SMT 8\PBM\Praktikum\my_app_learning\lib\main.dart" DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC9hNWMyNGY1MzhkMDVhYWY2NmY3OTcyZmIyMzk1OWQ4Y2FmYjlmOTVhLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false "PACKAGE_CONFIG=D:\File Kuliah Farsya\SMT 8\PBM\Praktikum\my_app_learning\.dart_tool\package_config.json" D:/tools/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\FILE KULIAH FARSYA\SMT 8\PBM\PRAKTIKUM\MY_APP_LEARNING\BUILD\WINDOWS\X64\CMAKEFILES\0BC60C4B50E8461998BD369EACB571EA\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\FILE KULIAH FARSYA\SMT 8\PBM\PRAKTIKUM\MY_APP_LEARNING\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/File Kuliah Farsya/SMT 8/PBM/Praktikum/my_app_learning/windows" "-BD:/File Kuliah Farsya/SMT 8/PBM/Praktikum/my_app_learning/build/windows/x64" --check-stamp-file "D:/File Kuliah Farsya/SMT 8/PBM/Praktikum/my_app_learning/build/windows/x64/flutter/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

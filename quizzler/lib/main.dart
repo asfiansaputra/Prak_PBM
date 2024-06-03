@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:quizzler/quiz_brain.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
-// membuat object quizBrain
 QuizBrain quizBrain = QuizBrain();
 
 // main Method
@@ -49,8 +48,6 @@ class _QuizPageState extends State<QuizPage> {
   int numCorrect = 0;
   int numIncorrect = 0;
 
-  // fungsi mengecek jawaban dari user (parameter userPickedAnswer)
-  // ke jawaban dari daftar pertanyaan (list questions/_questionBanks)
   void checkAnswer(bool userPickedAnswer) {
     bool correctAnswer = quizBrain.getCorrectAnswer();
 

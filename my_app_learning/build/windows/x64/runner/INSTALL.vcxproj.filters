@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\File Kuliah Farsya\SMT 8\PBM\Praktikum\my_app_learning\build\windows\x64\CMakeFiles\b63efdec1f1b650d92ab8bb38459433f\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{709FAB62-ABFC-3B44-A8CB-49D6665D023B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

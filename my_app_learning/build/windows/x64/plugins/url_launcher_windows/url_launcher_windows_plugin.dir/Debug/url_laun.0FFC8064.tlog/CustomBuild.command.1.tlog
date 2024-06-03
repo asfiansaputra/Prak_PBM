@@ -1,0 +1,10 @@
+^D:\FILE KULIAH FARSYA\SMT 8\PBM\PRAKTIKUM\MY_APP_LEARNING\WINDOWS\FLUTTER\EPHEMERAL\.PLUGIN_SYMLINKS\URL_LAUNCHER_WINDOWS\WINDOWS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/File Kuliah Farsya/SMT 8/PBM/Praktikum/my_app_learning/windows" "-BD:/File Kuliah Farsya/SMT 8/PBM/Praktikum/my_app_learning/build/windows/x64" --check-stamp-file "D:/File Kuliah Farsya/SMT 8/PBM/Praktikum/my_app_learning/build/windows/x64/plugins/url_launcher_windows/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
