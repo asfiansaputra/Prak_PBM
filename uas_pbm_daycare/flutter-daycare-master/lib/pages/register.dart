@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:day_care_app/pages/db_helper.dart'; // Ganti dengan path yang sesuai
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -9,10 +10,11 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   final _formKey = GlobalKey<FormState>();
-  String fullName = '';
   String email = '';
   String password = '';
   String confirmPassword = '';
+  String name = ''; // Tambahkan field untuk nama
+  String role = 'parent'; // Atur peran default, bisa diubah sesuai kebutuhan
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/bg_register1.jpg"),
+            image: AssetImage("images/bg_register.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -36,9 +38,9 @@ class _RegisterPageState extends State<RegisterPage> {
                     const Icon(
                       Icons.account_circle,
                       size: 150,
-                      color: Colors.white,
+                      color: Colors.blueAccent,
                     ),
-                    const SizedBox(height: 10.0),
+                    const SizedBox(height: 20.0),
                     const Text(
                       'Register',
                       style: TextStyle(
@@ -47,10 +49,10 @@ class _RegisterPageState extends State<RegisterPage> {
                         color: Colors.white,
                       ),
                     ),
-                    const SizedBox(height: 10.0),
+                    const SizedBox(height: 20.0),
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: 'Full Name',
+                        hintText: 'Name',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -60,15 +62,15 @@ class _RegisterPageState extends State<RegisterPage> {
                             const Icon(Icons.person, color: Colors.blueAccent),
                       ),
                       validator: (val) =>
-                          val!.isEmpty ? 'Enter an full name' : null,
+                          val!.isEmpty ? 'Enter your name' : null,
                       onChanged: (val) {
-                        setState(() => fullName = val);
+                        setState(() => name = val);
                       },
                     ),
                     const SizedBox(height: 20.0),
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: 'Email Address',
+                        hintText: 'Email',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -134,8 +136,24 @@ class _RegisterPageState extends State<RegisterPage> {
                         backgroundColor: Colors.blueAccent,
                       ),
                       child: const Text('Sign Up'),
-                      onPressed: () {
+                      onPressed: () async {
                         if (_formKey.currentState!.validate()) {
+                          // Simpan data pengguna ke database
+                          Map<String, dynamic> user = {
+                            'name': name,
+                            'email': email,
+                            'password': password,
+                            'role': role,
+                          };
+                          int id =
+                              await DatabaseHelper.instance.insertUser(user);
+                          print('User successfully registered with id: $id');
+
+                          // Ambil semua pengguna dan cetak ke debug console
+                          List<Map<String, dynamic>> users =
+                              await DatabaseHelper.instance.queryAllUsers();
+                          print('All users: $users');
+
                           Navigator.pop(context);
                         }
                       },

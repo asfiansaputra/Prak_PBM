@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:day_care_app/pages/db_helper.dart'; // Ganti dengan path yang sesuai
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -102,16 +103,27 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       child: const Text('Sign In'),
-                      onPressed: () {
+                      onPressed: () async {
                         if (_formKey.currentState!.validate()) {
-                          // Log to ensure navigation is called
-                          print(
-                              'Navigating to the appropriate home page for role: $role');
-                          Navigator.pushReplacementNamed(
-                              context,
-                              role == 'Caregiver'
-                                  ? '/home_caregiver'
-                                  : '/home_parent');
+                          // Validasi login
+                          Map<String, dynamic>? user =
+                              await DatabaseHelper.instance.queryUser(email);
+                          if (user != null && user['password'] == password) {
+                            // Log to ensure navigation is called
+                            print(
+                                'Navigating to the appropriate home page for role: $role');
+                            Navigator.pushReplacementNamed(
+                                context,
+                                role == 'Caregiver'
+                                    ? '/caregiver_home'
+                                    : '/home_parent');
+                          } else {
+                            // Tampilkan pesan error jika login gagal
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                  content: Text('Invalid email or password')),
+                            );
+                          }
                         }
                       },
                     ),

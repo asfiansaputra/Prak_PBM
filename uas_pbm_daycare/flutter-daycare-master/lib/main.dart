@@ -5,6 +5,8 @@ import 'pages/activity_input.dart';
 import 'pages/child_input.dart';
 import 'pages/child_activities.dart';
 import 'pages/login_selection.dart';
+import 'pages/caregiver_home.dart';
+import 'pages/activity_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,11 +24,13 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginSelectionPage(),
         '/register': (context) => const RegisterPage(),
         '/login': (context) => const LoginPage(),
-        '/home_caregiver': (context) => const ActivityInputPage(),
+        '/caregiver_home': (context) => const CaregiverHomePage(),
+        '/activity_list': (context) => const ActivityListPage(),
+        '/caregiver_activity': (context) => const ActivityInputPage(),
         '/home_parent': (context) => const ChildInputPage(),
-        '/child_activities': (context) => const ChildActivitiesPage(
-              childName: '',
-              childAge: 0,
+        '/child_activities': (context) => ChildActivitiesPage(
+              childName: ModalRoute.of(context)!.settings.arguments as String,
+              childAge: ModalRoute.of(context)!.settings.arguments as int,
             ),
       },
     );

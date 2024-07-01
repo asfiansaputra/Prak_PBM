@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:day_care_app/pages/db_helper.dart';
+import 'package:day_care_app/models/activity.dart';
 
 class ActivityInputPage extends StatefulWidget {
   const ActivityInputPage({super.key});
@@ -605,12 +607,49 @@ class _ActivityInputPageState extends State<ActivityInputPage> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      child: const Text(
-                        'Save',
-                        style: TextStyle(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            Navigator.pop(context, {
+                              'childName': childName,
+                              'childAge': childAge,
+                              'childTemperature': childTemperature,
+                              'childCondition': childCondition,
+                              'otherFeeling': otherFeeling,
+                              'otherItemNeeded': otherItemNeeded,
+                              'selectedDate': selectedDate
+                                  .toLocal()
+                                  .toString()
+                                  .split(' ')[0],
+                              'selectedTime': selectedTime.format(context),
+                              'bathroomTime': bathroomTime.format(context),
+                              'dropOffTime': dropOffTime.format(context),
+                              'toiletType': toiletType,
+                              'toiletCondition': toiletCondition,
+                              'meals': meals,
+                              'showerTime': showerTime,
+                              'activityDescription': activityDescription,
+                              'parentNote': parentNote,
+                              'feelings': feelings,
+                              'itemsNeeded': itemsNeeded,
+                            });
+                          }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              const Color.fromARGB(255, 163, 186, 197),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        child: const Text(
+                          'Save',
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 16,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
                   ),
